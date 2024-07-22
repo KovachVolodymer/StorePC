@@ -1,7 +1,10 @@
 package com.example.apikovach.model;
 
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.annotation.Id;
 
+@Data
 public class User {
 
     @Id
@@ -11,4 +14,7 @@ public class User {
     private String email;
     private String password;
 
+
+    public User(String name, String email) {
+    }
 }

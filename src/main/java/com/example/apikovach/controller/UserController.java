@@ -1,5 +1,6 @@
 package com.example.apikovach.controller;
 
+import com.example.apikovach.dto.UserDto;
 import com.example.apikovach.model.User;
 import com.example.apikovach.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAllUser()
+    public List<UserDto> getAllUser()
     {
         return userService.getAllUser();
     }
