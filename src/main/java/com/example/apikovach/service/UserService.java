@@ -23,14 +23,18 @@ public class UserService {
         this.userMapper = userMapper;
     }
 
-    public List<UserDto> getAllUser() {
-        return userRepository.findAll()
-                .stream()
-                .map(userMapper::dtoUser)
-                .collect(Collectors.toList());
-    }
+//    public List<UserDto> getAllUser() {
+//        return userRepository.findAll()
+//                .stream()
+//                .map(userMapper::dtoUser)
+//                .collect(Collectors.toList());
+//    }
+//
+//    public UserDto getUser(String id) {
+//       return userRepository.findById(id)
+//               .map(userMapper::dtoUser)
+//               .orElse(null);
+//    }
 
-    public Optional<User> getUser(String id) {
-        return userRepository.findById(id);
-    }
+
 }
