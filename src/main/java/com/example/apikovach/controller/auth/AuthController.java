@@ -1,8 +1,6 @@
 package com.example.apikovach.controller.auth;
 
-import com.example.apikovach.dto.UserDto;
 import com.example.apikovach.dto.request.RegisterRequest;
-import com.example.apikovach.model.User;
 import com.example.apikovach.service.AuthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,5 +21,7 @@ public class AuthController {
     public ResponseEntity<Object> register(@RequestBody RegisterRequest request) {
         return authService.register(request);
     }
+
+
 
 }
