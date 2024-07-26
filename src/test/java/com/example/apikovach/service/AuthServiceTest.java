@@ -7,11 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AuthServiceTest {
 
-    @BeforeEach
-    void setUp() {
-    }
+
 
     @Test
     void register() {
+        System.out.println("My first test");
     }
 }

@@ -1,5 +1,6 @@
 package com.example.apikovach.service;
 
+import com.example.apikovach.dto.request.LoginRequest;
 import com.example.apikovach.dto.request.RegisterRequest;
 import com.example.apikovach.dto.response.MessageResponse;
 import com.example.apikovach.model.User;
@@ -35,6 +36,8 @@ public class AuthService {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(new MessageResponse("register successful"));
     }
+
+
 
 
 }
