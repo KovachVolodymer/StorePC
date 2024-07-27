@@ -11,6 +11,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +33,7 @@ class UserServiceTest {
 
     @Test
     void getAllUser() {
+
         List<User> users = List.of(new User("1", "John", "john@example.com", "password"));
         when(userRepository.findAll()).thenReturn(users);
 
@@ -83,7 +85,6 @@ class UserServiceTest {
         verify(userRepository, times(1)).existsByEmail("johnny@example.com");
         verify(userRepository, times(1)).save(existingUser);
     }
-
 
 
     @Test
