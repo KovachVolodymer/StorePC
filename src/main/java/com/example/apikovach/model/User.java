@@ -3,6 +3,9 @@ package com.example.apikovach.model;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Data
 public class User {
 
@@ -12,6 +15,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private Set<String> roles = new HashSet<>();
 
 
     public User(String name, String email, String password) {
