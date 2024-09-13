@@ -3,6 +3,7 @@ package com.example.apikovach.controller.auth;
 import com.example.apikovach.dto.request.RegisterRequest;
 import com.example.apikovach.service.AuthService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ public class AuthController {
         this.authService = authService;
     }
 
-    @RequestMapping("/register")
+    @PostMapping("/register")
     public ResponseEntity<Object> register(@RequestBody RegisterRequest request) {
         return authService.register(request);
     }

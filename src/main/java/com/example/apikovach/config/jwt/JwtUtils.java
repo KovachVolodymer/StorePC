@@ -18,7 +18,7 @@ import java.util.Date;
 @Component
 public class JwtUtils {
 
-    @Value("#(jwt.secret)")
+    @Value("${jwt.secret}")
     private String jwtSecret;
 
     @Value("${jwt.expiration}")
@@ -26,9 +26,6 @@ public class JwtUtils {
 
     public String createToken(Authentication authentication){
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-
-        Date now = new Date();
-        Date expirationDate = new Date(now.getTime() + expirationMs);
 
         return Jwts.builder()
                 .setSubject(userDetails.getEmail())

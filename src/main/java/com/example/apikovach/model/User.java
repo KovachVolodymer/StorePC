@@ -22,6 +22,7 @@ public class User {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.roles.add("ROLE_USER");
     }
 
     public User(String id, String name, String email, String password) {
@@ -31,5 +32,8 @@ public class User {
         this.password = password;
     }
 
+    public User(){
+
+    }
 
 }
